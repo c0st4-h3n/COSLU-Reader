@@ -46,44 +46,50 @@ Produto open source da **COSLU LABZ**.
 > texto/estrutura. **RAW de câmera** (CR2/NEF/ARW/DNG) abre como hex hoje
 > (melhoria futura).
 
-## Pré-requisitos
+## Instalar e usar (não precisa de nada de programador)
 
-- **Windows 10/11.** No Windows 11 o WebView2 já vem; no 10, instale o
-  [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/).
-- **Node.js** ≥ 20.19 ou ≥ 22.12 (LTS recomendado).
-- **Rust + Cargo** ([rustup](https://rustup.rs)) + Build Tools do Visual Studio (MSVC).
-- *Opcional, recomendado:* **LibreOffice** — fidelidade real de PPTX/DOCX.
+1. Vá em **[Releases](https://github.com/c0st4-h3n/COSLU-Reader/releases)**
+   e baixe o **`Coslu Reader_<versão>_x64-setup.exe`** (ou o `.msi`).
+2. Execute o instalador. **Só isso** — não precisa de Node, Rust ou
+   qualquer ferramenta de desenvolvimento.
 
-## Rodar a partir do código
+Requisitos para usar:
+
+- **Windows 10/11.** O WebView2 já vem no Windows 11; no Windows 10, se
+  necessário, instale o
+  [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)
+  (gratuito, ~2 MB).
+- *Opcional:* **[LibreOffice](https://www.libreoffice.org)** instalado —
+  só para **fidelidade total de DOCX/PPTX** (sem ele, esses dois caem para
+  extração de texto; todo o resto funciona normalmente).
+
+> O instalador é **não assinado** por enquanto — o Windows mostra um aviso
+> do SmartScreen ("editor desconhecido") na primeira vez. Clique em
+> **Mais informações → Executar assim mesmo**. (Assinatura de código é
+> item de pré-lançamento.)
+
+## Compilar a partir do código (desenvolvedores)
+
+Só necessário se você for **buildar/contribuir** — o usuário final usa o
+instalador acima.
+
+Pré-requisitos: **Node.js** ≥ 20.19 ou ≥ 22.12 · **Rust + Cargo**
+([rustup](https://rustup.rs)) + Build Tools do Visual Studio (MSVC).
 
 ```sh
 git clone https://github.com/c0st4-h3n/COSLU-Reader.git
 cd COSLU-Reader/coslu-reader
 npm install
-npm run tauri dev
+npm run tauri dev          # desenvolvimento (abre a janela)
+npm run tauri build        # gera o instalador
 ```
 
-Abrir um arquivo específico no modo dev:
+Abrir um arquivo no modo dev:
+`npm run tauri -- dev -- "C:\caminho\arquivo.pdf"`
 
-```sh
-npm run tauri -- dev -- "C:\caminho\para\o\arquivo.pdf"
-```
-
-## Gerar o instalador
-
-```sh
-cd coslu-reader
-npm run tauri build
-```
-
-Os artefatos saem em `coslu-reader/src-tauri/target/release/bundle/`:
-
-- `nsis/Coslu Reader_<versão>_x64-setup.exe`
-- `msi/Coslu Reader_<versão>_x64_en-US.msi`
-
-> Este build é **não assinado** — o Windows mostrará um aviso do SmartScreen
-> ("editor desconhecido") na primeira execução. É esperado nesta fase
-> (code signing é item de pré-lançamento).
+Os instaladores gerados saem em
+`coslu-reader/src-tauri/target/release/bundle/` (`nsis/…-setup.exe` e
+`msi/…_x64_en-US.msi`).
 
 ## Como usar
 
