@@ -1,0 +1,18 @@
+{
+  "produto": "Coslu Reader",
+  "versao": "0.1.0",
+  "local_first": true,
+  "formatos_suportados": null,
+  "familias": ["texto", "dados", "hex"],
+  "boot": {
+    "estrategia": "deteccao-antes-de-load",
+    "custo_marginal": "O(1)",
+    "niveis": [
+      { "tier": "S", "exemplo": "JSON em arvore" },
+      { "tier": "B", "exemplo": "hex (garantia universal)" }
+    ]
+  },
+  "numeros": { "inteiro": 42, "float": 3.14, "negativo": -7 },
+  "__proto__": "ISTO_DEVE_SUMIR_pelo_reviver_de_seguranca",
+  "fim": true
+}

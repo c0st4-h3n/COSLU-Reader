@@ -1,0 +1,8 @@
+familia,modelo_normalizado,tier,nota
+Texto/Codigo,"texto + linguagem",S,"Shiki cobre o resto depois"
+Dados,arvore colapsavel,S,"JSON, YAML, XML, TOML…"
+Tabular,linhas x colunas,S,"este viewer; campo com vírgula, ok"
+Imagem,bitmap/vetor,S,"SVG via <img> blob (§13)"
+Hex,dump hex+ascii,B,"garantia universal — nunca falha"
+Edge,quoting,A,"campo com ""aspas"" e
+quebra de linha embutida"

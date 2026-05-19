@@ -1,0 +1,113 @@
+/* COSLU Labz · Brand Tokens  (reuso fiel — fonte: ../COSLU Labz/brand-tokens.css)
+   "Academic Journal Brutalism"
+   Paleta JOURNAL · Newsreader + JetBrains Mono
+   NOTA §13: o @import de fontes via Google Fonts deve ser VENDORIZADO
+   (fontes locais) quando a CSP for endurecida — sem rede em runtime. */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* PAPER & INK ------- */
+  --c-paper:       #efe8d8;   /* cream paper, primary surface */
+  --c-paper-2:     #e5dec9;   /* aged paper, secondary surface */
+  --c-paper-3:     #d9d1bf;   /* deep paper, tertiary */
+  --c-ink:         #1a1a1a;   /* full ink */
+  --c-ink-mute:    #5a5147;   /* footnote ink */
+  --c-ink-faint:   #8c8478;   /* margin notes */
+
+  /* ACCENTS (journal) - */
+  --c-vermilion:   #b8311e;   /* primary accent — alert, hot, brand */
+  --c-vermilion-d: #8a2516;
+  --c-cobalt:      #1f3a8a;   /* secondary accent — cool, deep */
+  --c-cobalt-d:    #142562;
+
+  /* SUB-BRAND TINTS --- */
+  --c-games:       #b8311e;   /* vermilion */
+  --c-oss:         #1f3a8a;   /* cobalt */
+  --c-platform:    #1a1a1a;   /* ink */
+
+  /* TYPE -------------- */
+  --f-display: 'Newsreader', 'Times New Roman', Georgia, serif;
+  --f-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* RHYTHM ------------ */
+  --rule:        1px solid var(--c-ink);
+  --rule-mute:   1px solid color-mix(in srgb, var(--c-ink) 25%, transparent);
+  --rule-thick:  3px solid var(--c-ink);
+}
+
+/* paper-textured background helper */
+.paper-bg {
+  background-color: var(--c-paper);
+  background-image:
+    radial-gradient(rgba(26,26,26,0.045) 1px, transparent 1px),
+    radial-gradient(rgba(26,26,26,0.025) 1px, transparent 1px);
+  background-size: 24px 24px, 11px 11px;
+  background-position: 0 0, 6px 6px;
+}
+
+.ink-bg {
+  background-color: var(--c-ink);
+  background-image:
+    radial-gradient(rgba(239,232,216,0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* placeholders & monospace details */
+.ph-stripe {
+  background:
+    repeating-linear-gradient(
+      135deg,
+      transparent 0 7px,
+      color-mix(in srgb, currentColor 12%, transparent) 7px 8px
+    ),
+    color-mix(in srgb, currentColor 4%, transparent);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, currentColor 70%, transparent);
+}
+
+/* base type setup inside artboards */
+.coslu {
+  font-family: var(--f-display);
+  color: var(--c-ink);
+  text-rendering: geometricPrecision;
+}
+.coslu .mono { font-family: var(--f-mono); }
+.coslu .serif { font-family: var(--f-display); }
+
+/* core wordmark */
+.wm {
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: -0.04em;
+  font-stretch: normal;
+  line-height: 0.85;
+  font-feature-settings: "ss01" on, "kern" on;
+}
+.wm--italic { font-style: italic; font-weight: 600; }
+
+/* footnote tag */
+.tag {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+}
+
+/* crosshair tick at corners */
+.crosshair::before,
+.crosshair::after {
+  content: '+'; position: absolute;
+  font-family: var(--f-mono); font-size: 14px;
+  color: var(--c-ink-mute); line-height: 1;
+}
+.crosshair.tl::before { top: 10px; left: 10px; }
+.crosshair.tr::before { top: 10px; right: 10px; }
+.crosshair.bl::after { bottom: 10px; left: 10px; }
+.crosshair.br::after { bottom: 10px; right: 10px; }

@@ -1,0 +1,99 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Coslu Reader",
+  "version": "0.1.0",
+  "identifier": "com.coslulabz.reader",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "fileAssociations": [
+      {
+        "name": "coslu-doc",
+        "role": "Viewer",
+        "description": "Documento / e-book (Coslu Reader)",
+        "ext": ["pdf", "docx", "docm", "odt", "pptx", "pptm", "epub"]
+      },
+      {
+        "name": "coslu-data",
+        "role": "Viewer",
+        "description": "Dados / planilha / notebook (Coslu Reader)",
+        "ext": [
+          "xlsx", "xlsm", "xls", "ods", "csv", "tsv", "psv", "parquet",
+          "arrow", "feather", "ipc", "json", "jsonl", "ndjson", "jsonc",
+          "json5", "sqlite", "sqlite3", "db", "ipynb"
+        ]
+      },
+      {
+        "name": "coslu-code",
+        "role": "Viewer",
+        "description": "Texto / código / config (Coslu Reader)",
+        "ext": [
+          "txt", "log", "diff", "patch", "md", "markdown", "mdown",
+          "mkd", "mkdn", "ini", "toml", "yaml", "yml", "xml", "html",
+          "htm", "css", "scss", "less", "js", "mjs", "cjs", "jsx", "ts",
+          "tsx", "mts", "cts", "rs", "py", "pyw", "go", "c", "h", "cc",
+          "cxx", "hpp", "hh", "cpp", "cs", "java", "kt", "kts", "rb",
+          "php", "sh", "bash", "zsh", "ps1", "bat", "cmd", "sql", "conf",
+          "env", "properties", "swift", "scala", "dart", "lua", "pl",
+          "r", "jl", "hs", "ex", "exs", "erl", "clj", "fs", "ml", "nim",
+          "zig", "sol", "vue", "svelte", "astro", "graphql", "gql",
+          "proto", "tf", "asm", "s", "nasm", "wat", "wgsl", "vim",
+          "lisp", "scm", "elm", "purs"
+        ]
+      },
+      {
+        "name": "coslu-image",
+        "role": "Viewer",
+        "description": "Imagem / fonte (Coslu Reader)",
+        "ext": [
+          "png", "jpg", "jpeg", "gif", "webp", "avif", "bmp", "ico",
+          "apng", "svg", "psd", "psb", "ttf", "otf", "woff", "woff2",
+          "ttc"
+        ]
+      },
+      {
+        "name": "coslu-media",
+        "role": "Viewer",
+        "description": "Áudio / vídeo (Coslu Reader)",
+        "ext": [
+          "mp3", "wav", "flac", "ogg", "oga", "opus", "aac", "m4a",
+          "mp4", "m4v", "webm", "mkv", "mov", "avi"
+        ]
+      },
+      {
+        "name": "coslu-3d",
+        "role": "Viewer",
+        "description": "Modelo 3D / CAD (Coslu Reader)",
+        "ext": ["glb", "gltf", "stl", "obj", "ply"]
+      },
+      {
+        "name": "coslu-archive",
+        "role": "Viewer",
+        "description": "Arquivo / binário (Coslu Reader)",
+        "ext": [
+          "zip", "jar", "war", "apk", "tar", "gz", "tgz", "wasm",
+          "class", "pyc", "elf"
+        ]
+      }
+    ]
+  }
+}

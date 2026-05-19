@@ -1,0 +1,7 @@
+Coslu Reader — arquivo de teste da família Texto.
+
+Este arquivo .txt deve ser detectado como Kind::Text pelo Rust
+(extensão conhecida) e renderizado pelo TextViewer (chunk lazy
+separado). Acentuação para testar UTF-8: ção, ãõ, é, ü, ¬.
+
+Linha longa para conferir o wrap: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

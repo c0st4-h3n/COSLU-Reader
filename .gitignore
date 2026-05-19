@@ -1,0 +1,17 @@
+# Brand book — IP de marca separado (decisão: fora do repo do produto)
+/COSLU Labz/
+
+# Dependências e artefatos de build
+**/node_modules/
+**/dist/
+**/target/
+**/gen/schemas/
+
+# Fixture de fonte = Consolas (Microsoft, proprietária) — não publicar
+coslu-reader/samples/sample.ttf
+
+# Logs / SO / editor
+*.log
+.DS_Store
+Thumbs.db
+*.swp

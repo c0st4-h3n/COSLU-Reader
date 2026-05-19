@@ -1,0 +1,5 @@
+{
+  "isto": "é um .json inválido de propósito",
+  "faltou_virgula": true
+  "erro": "JSON.parse deve lançar aqui",
+}

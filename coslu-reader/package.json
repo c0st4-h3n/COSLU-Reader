@@ -1,0 +1,45 @@
+{
+  "name": "coslu-reader",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@tauri-apps/api": "^2",
+    "papaparse": "^5.5.3",
+    "markdown-it": "^14",
+    "dompurify": "^3",
+    "shiki": "^4",
+    "epubjs": "^0.3",
+    "three": "^0.184",
+    "@webtoon/psd": "^0.4",
+    "fflate": "^0.8",
+    "hyparquet": "^1",
+    "hyparquet-compressors": "^1",
+    "@sqlite.org/sqlite-wasm": "3.53.0-build1",
+    "apache-arrow": "^21",
+    "pdfjs-dist": "^5"
+  },
+  "devDependencies": {
+    "ag-psd": "^30",
+    "pdf-lib": "^1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/papaparse": "^5.3.15",
+    "@types/markdown-it": "^14",
+    "@types/three": "^0.184",
+    "hyparquet-writer": "^0.15",
+    "@vitejs/plugin-react": "^4.6.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.4",
+    "@tauri-apps/cli": "^2"
+  }
+}
